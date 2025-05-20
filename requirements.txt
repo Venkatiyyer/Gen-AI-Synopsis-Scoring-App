@@ -1,0 +1,24 @@
+streamlit
+presidio_analyzer
+presidio_anonymizer
+# python -m spacy download en_core_web_lg
+en_core_web_lg @ https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.6.0/en_core_web_lg-3.6.0-py3-none-any.whl
+pydantic
+python-multipart
+python-dotenv
+PyMuPDF
+langchain
+langchain-groq
+transformers
+sentence-transformers
+requests
+langchain-community
+faiss-cpu
+# ffmpeg-python
+protobuf==3.20.*
+
+
+
+
+# Pin rich to Streamlit’s version
+rich==14.0.0
