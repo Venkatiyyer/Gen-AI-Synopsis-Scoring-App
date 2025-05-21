@@ -3,7 +3,6 @@ from presidio_analyzer.nlp_engine import NlpEngineProvider
 from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.entities import RecognizerResult
 from presidio_anonymizer.entities  import OperatorConfig
-import streamlit as st
 
 # Define the NLP configuration
 configuration = {
@@ -18,7 +17,6 @@ nlp_engine = provider.create_engine()
 
 
 # Load your transformer model
-@st.cache_resource
 def load_trf_model():
     spacy.cli.download("en_core_web_trf")  # installs only if missing
     return spacy.load("en_core_web_trf")
