@@ -1,4 +1,5 @@
-from presidio_analyzer import AnalyzerEngine, PatternRecognizer, SpacyNlpEngineProvider
+from presidio_analyzer import AnalyzerEngine, PatternRecognizer
+from presidio_analyzer.nlp_engine import NlpEngineProvider
 from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.entities import RecognizerResult
 from presidio_anonymizer.entities  import OperatorConfig
@@ -22,7 +23,7 @@ def analyzer_results(text: str) -> str:
     """
     # Initialize the Presidio analyzer engine
     analyzer = AnalyzerEngine(
-    nlp_engine=SpacyNlpEngineProvider(nlp, supported_languages=["en"])
+    nlp_engine=NlpEngineProvider(nlp, supported_languages=["en"])
 )
     
     # Run the anonymizer, returns list of recognizer results
