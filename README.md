@@ -6,7 +6,7 @@ A Streamlit application that lets users upload an article and its synopsis, then
 
 ### 📋 Prerequisites
 
-- Python 3.8+  
+- Python 3.10+  
 - Git (for cloning the repo)  
 - An OpenAI or Groq API key (if using LLM for feedback)
 
@@ -14,8 +14,8 @@ A Streamlit application that lets users upload an article and its synopsis, then
 
 1. **Clone the repository**  
    ```bash
-   git clone https://github.com/your-org/genai-synopsis-scoring.git
-   cd genai-synopsis-scoring
+   git clone [https://github.com/Venkatiyyer/Gen-AI-Synopsis-Scoring-App]
+   cd genai-synopsis-scoring-app
    ```
 
 2. **Create & activate a virtual environment**  
@@ -28,7 +28,7 @@ A Streamlit application that lets users upload an article and its synopsis, then
 3. **Install dependencies**  
    ```bash
    pip install -r requirements.txt
-   python -m spacy download en_core_web_trf
+   python -m spacy download en_core_web_lg
    ```
 
 4. **Configure environment variables**  
@@ -50,9 +50,9 @@ streamlit run app.py
 
 ```
 genai_synopsis_app/
-├── app.py
-├── anonymizer.py      # Presidio-based PII removal
-├── scorer.py          # Scoring & optional LLM feedback
+├── backend.py
+├── anonymize.py      # Presidio-based PII removal
+├── frontend.py          # Scoring & optional LLM feedback
 ├── requirements.txt
 ├── privacy_note.md    # Detailed privacy strategy
 └── README.md
