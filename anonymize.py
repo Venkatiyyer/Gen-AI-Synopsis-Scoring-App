@@ -1,7 +1,17 @@
-from presidio_analyzer import AnalyzerEngine, PatternRecognizer
+from presidio_analyzer import AnalyzerEngine, PatternRecognizer, SpacyNlpEngineProvider
 from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.entities import RecognizerResult
 from presidio_anonymizer.entities  import OperatorConfig
+
+
+
+# Load your transformer model
+@st.cache_resource
+def load_trf_model():
+    spacy.cli.download("en_core_web_trf")  # installs only if missing
+    return spacy.load("en_core_web_trf")
+
+nlp = load_trf_model()
 
 
 def analyzer_results(text: str) -> str:
