@@ -3,6 +3,7 @@ from presidio_analyzer.nlp_engine import NlpEngineProvider
 from presidio_anonymizer import AnonymizerEngine
 from presidio_anonymizer.entities import RecognizerResult
 from presidio_anonymizer.entities  import OperatorConfig
+import spacy
 
 # Define the NLP configuration
 configuration = {
