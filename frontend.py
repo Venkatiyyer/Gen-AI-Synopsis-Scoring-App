@@ -12,19 +12,19 @@ from backend import (
 # ─── Page Config ──────────────────────────────────────────────────────────────
 st.set_page_config(page_title="Eval-RAG by Venkat Iyer", layout="wide", initial_sidebar_state="expanded")
 
-# ─── Data Reset Uploads────────────────────────────────────────────────────────────────
+# # ─── Data Reset Uploads────────────────────────────────────────────────────────────────
 
-if st.sidebar.button("🗑️ Delete All Upload Files"):
-    # Remove stored FAISS indices
-    for path in ('temp'):
-        if os.path.isdir(path):
-            shutil.rmtree(path)
-    # # Clear session state
-    # for key in ["article_text", "synopsis_text"]:
-    #     if key in st.session_state:
-    #         del st.session_state[key]
-    st.sidebar.success("✅ All stored files has been cleared.")
-    # st.experimental_rerun()
+# if st.sidebar.button("🗑️ Delete All Upload Files"):
+#     # Remove stored FAISS indices
+#     for path in ('temp'):
+#         if os.path.isdir(path):
+#             shutil.rmtree(path)
+#     # # Clear session state
+#     # for key in ["article_text", "synopsis_text"]:
+#     #     if key in st.session_state:
+#     #         del st.session_state[key]
+#     st.sidebar.success("✅ All stored files has been cleared.")
+#     # st.experimental_rerun()
 
 
 
