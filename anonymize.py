@@ -11,7 +11,9 @@ def analyzer_results(text: str) -> str:
     Returns analyzed text.
     """
     # Initialize the Presidio analyzer engine
-    analyzer = AnalyzerEngine()
+    analyzer = AnalyzerEngine(
+    nlp_engine=SpacyNlpEngineProvider(nlp, supported_languages=["en"])
+)
     
     # Run the anonymizer, returns list of recognizer results
     analyzer_results = analyzer.analyze(text=text,  language='en')
